@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{462BDB40-3821-4576-B239-EC322C244E31}</ProjectGuid>
+    <RootNamespace>drawtest</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\objects\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>VB3</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\objects\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>CinemixAutomationBridge</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\objects\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>CinemixAutomationBridge</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>CinemixAutomationBridge</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\vstsdk2.4\;..\vstsdk2.4\vstgui.sf\vstgui;..\vstsdk2.4\public.sdk\source\vst2.x;..\vstsdk2.4\vstgui.sf\libpng;..\vstsdk2.4\vstgui.sf\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;USE_LIBPNG=1;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>Plugin.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\vstsdk2.4\;..\vstsdk2.4\vstgui.sf\vstgui;..\vstsdk2.4\public.sdk\source\vst2.x;..\vstsdk2.4\vstgui.sf\libpng;..\vstsdk2.4\vstgui.sf\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;USE_LIBPNG=1;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE=1;__WINDOWS_MM__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>Plugin.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\vstsdk2.4\;..\vstsdk2.4\vstgui.sf\vstgui;..\vstsdk2.4\public.sdk\source\vst2.x;..\vstsdk2.4\vstgui.sf\libpng;..\vstsdk2.4\vstgui.sf\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;USE_LIBPNG=1;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE=1;__WINDOWS_MM__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>Plugin.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\vstsdk2.4\;..\vstsdk2.4\vstgui.sf\vstgui;..\vstsdk2.4\public.sdk\source\vst2.x;..\vstsdk2.4\vstgui.sf\libpng;..\vstsdk2.4\vstgui.sf\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;USE_LIBPNG=1;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE=1;__WINDOWS_MM__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>Plugin.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp" />
+    <ClCompile Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp" />
+    <ClCompile Include="..\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\vstgui\aeffguieditor.cpp" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\vstgui\cfileselector.cpp" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\vstgui\cscrollview.cpp" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\vstgui\ctabview.cpp" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\vstgui\vstcontrols.cpp" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\vstgui\vstgui.cpp" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\png.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngerror.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pnggccrd.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngget.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngmem.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngpread.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngread.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngrio.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngrtran.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngrutil.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngset.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngtrans.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngvcrd.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngwio.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngwrite.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngwtran.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\libpng\pngwutil.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\adler32.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\compress.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\crc32.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\deflate.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\gzio.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\infback.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\inffast.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\inflate.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\inftrees.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\trees.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\uncompr.c" />
+    <ClCompile Include="..\vstsdk2.4\vstgui.sf\zlib\zutil.c" />
+    <ClCompile Include="CTouchPad.cpp" />
+    <ClCompile Include="Editor.cpp" />
+    <ClCompile Include="Plugin.cpp" />
+    <ClCompile Include="RtMidi\RtMidi.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\aeffeditor.h" />
+    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.h" />
+    <ClInclude Include="..\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h" />
+    <ClInclude Include="..\vstsdk2.4\vstgui.sf\vstgui\aeffguieditor.h" />
+    <ClInclude Include="..\vstsdk2.4\vstgui.sf\vstgui\cfileselector.h" />
+    <ClInclude Include="..\vstsdk2.4\vstgui.sf\vstgui\cscrollview.h" />
+    <ClInclude Include="..\vstsdk2.4\vstgui.sf\vstgui\ctabview.h" />
+    <ClInclude Include="..\vstsdk2.4\vstgui.sf\vstgui\vstcontrols.h" />
+    <ClInclude Include="..\vstsdk2.4\vstgui.sf\vstgui\vstgui.h" />
+    <ClInclude Include="..\vstsdk2.4\vstgui.sf\vstgui\vstkeycode.h" />
+    <ClInclude Include="..\vstsdk2.4\vstgui.sf\libpng\png.h" />
+    <ClInclude Include="..\vstsdk2.4\vstgui.sf\libpng\pngconf.h" />
+    <ClInclude Include="..\vstsdk2.4\vstgui.sf\zlib\zlib.h" />
+    <ClInclude Include="Editor.h" />
+    <ClInclude Include="Plugin.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Plugin.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

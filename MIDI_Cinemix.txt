@@ -1,0 +1,76 @@
+Quando il programma PowerVCA parte manda:
+CC# 127 Val: 127 Ch. 5
+CC#  65 Val:   1 Ch. 5
+Poi resetta tutti i SEL e i Touch Fader
+CC# 127 Val: 127 Ch. 5
+CC#  65 Val:  15 Ch. 5
+
+
+Quando il programma PowerVCA esce manda:
+Status 255 (System Reset)
+
+
+VALORI DEI TASTI SEL:
+0=Isolated
+1=Read
+2=Write
+3=Auto
+
+
+
+CANALI DA 1 a 24
+
+MUTE:
+
+Chan 1:		CC#  0, Ch. 3, Val: 2=OFF, 3=ON
+Mix  1:		CC#  1, Ch. 3, Val: 2=OFF, 3=ON
+...
+Chan 24:	CC# 46, Ch. 3, Val: 2=OFF, 3=ON
+Mix  24:	CC# 47, Ch. 3, Val: 2=OFF, 3=ON
+
+
+TOUCH FADERS:
+
+Chan 1:		CC# 64, Ch. 3, Val: 6=TOUCH, 5=RELEASE
+Mix  1:		CC# 65, Ch. 3, Val: 6=TOUCH, 5=RELEASE
+..
+Chan 24:	CC# 110, Ch. 3, Val: 6=TOUCH, 5=RELEASE
+Mix  24:	CC# 111, Ch. 3, Val: 6=TOUCH, 5=RELEASE
+
+
+FADER MOVE:
+Chan 1:		CC# 0+1, Ch. 1, Val: 0 ~ 127 (Interpolated)
+Mix  1: 	CC# 2+3, Ch. 1, Val: 0 ~ 127 (Interpolated)
+...
+Chan 24:	CC# 92+93, Ch. 1, Val: 0 ~ 127 (Interpolated)
+Mix  24: 	CC# 94+95, Ch. 1, Val: 0 ~ 127 (Interpolated)
+
+
+SWITCH SEL R/W
+
+Chan 1:		CC# 64, Ch. 3, Val: 1=R, 3=RW, 1+2+(CC#0, ch.1, val.0)=W, 0=OFF
+Mix  1:		CC# 65, Ch. 3, Val: 1=R, 3=RW, 1+2+(CC#2, ch.1, val.0)=W, 0=OFF
+
+
+
+CANALI DA 24 a 32
+
+Stessa cosa di sopra ma Channel += 1
+
+
+
+MASTER SECTION
+
+Master Fader:		CC# 0+1, Ch. 5
+Master SEL R/W:		(send) CC# 64, Val. 1, Ch. 5
+
+Joystick 1 vertical:	CC# 50, Ch. 2, Val 0~127 (0=top, 127=bottom)
+Joystick 1 horizontal:	CC# 48, Ch. 2, Val 0~127 (0=left, 127=right)
+Joystick 1 SEL R/W:	(send) CC# 88, Val. 1, Ch. 4
+Joyttick 1 Mute:	CC# 24, Ch. 4, Val. 2=OFF, 3=ON
+
+Joystick 2 vertical:	CC# 54, Ch. 2, Val 0~127 (0=top, 127=bottom)
+Joystick 2 horizontal:	CC# 52, Ch. 2, Val 0~127 (0=left, 127=right)
+Joystick 2 SEL R/W:	(send) CC# 90, Val. 1, Ch. 4
+Joyttick 2 Mute:	CC# 26, Ch. 4, Val. 2=OFF, 3=ON
+
