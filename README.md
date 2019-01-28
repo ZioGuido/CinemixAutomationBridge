@@ -60,3 +60,12 @@ Technical notes: This plugin is not compatible with Pro Tools and with the FXpan
 A copy of this README with illustrations and links to download the executable files can be found at:
 https://www.genuinesoundware.com/?a=page&p=TheCinemixProject
 
+
+DEPENDENCIES
+
+This project needs:
+- Steinberg's VST 2.4 + VSTGUI 3.0
+- RtMidi library
+
+Refer to the stdafx.h file for more informations.
+
